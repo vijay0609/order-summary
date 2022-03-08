@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    font-family:"red hat display" ;
+}
+
+body{
+    background: url("images/pattern-background-desktop.svg"),var(--Pale-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    max-width: 390px;
+    min-width: 190px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.85);
+    overflow: hidden;
+    padding: 0 15px;
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 675px) {
+    .card{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%) scale(0.8);
+        
+    }
+}
+@media only screen and (max-width: 375px) {
+    body{
+        background: url("images/pattern-background-mobile.svg"),var(--Pale-blue);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .card{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%) scale(0.65);
+        
+    }
+}
+@media only screen and (max-width: 175px) {
+    .card{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%) scale(0.3);
+        
+    }
+}
+.card img{
+    max-width: 420px;
+    min-width: 190px;
+
+}
+
+
+
+.card h2{
+    font-weight: 900;
+    color: var(--Dark-blue);
+    margin: 32px 0 16px 0;
+}
+
+.card p{
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+    padding: 0 15px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.annual-plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 32px 0;
+    border-radius: 15px;
+    background-color: var(--Very-pale-blue);
+    
+}
+
+.annual-plan img{
+    max-width: 100px;
+    min-width: 50px;
+    
+}
+
+.annual-plan h4{
+    font-weight: 700;
+    margin: 0 15px;
+    color: var(--Dark-blue);
+}
+
+.annual-plan h5{
+    font-weight: 500;
+    margin: 0 15px;
+    color: var(--Desaturated-blue);
+}
+
+.img{
+    display: flex;
+    padding: 20px 25px;
+}
+
+.annual-plan a{
+    color: var(--Bright-blue);
+    text-transform: capitalize;
+    margin: 20px 25px;
+}
+
+.annual-plan a:hover{
+    text-decoration: none;
+}
+
+.pay{
+    padding: 15px 90px;
+    font-weight: 700;
+    background-color: var(--Bright-blue);
+    color: white;
+    border-radius: 10px;
+    box-shadow: var(--Desaturated-blue) 0px 8px 17px 1px;
+    text-decoration: none;
+    margin: 0px 0 32px 0;
+    transition: 0.5s;
+}
+
+.pay:hover{
+    opacity: 0.7;
+}
+
+.cancel{
+    color: var(--Desaturated-blue);
+    margin-bottom: 48px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cancel:hover{
+    color: var(--Dark-blue);
+}
